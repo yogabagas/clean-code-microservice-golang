@@ -1,0 +1,56 @@
+{
+    "rest": {
+      "port": 8080
+    },
+    "migration": {
+      "postgres": {
+        "dir": "file://db/migrations/postgres",
+        "search_path": "public"
+      }
+    },
+    "database": {
+      "postgres": {
+        "write": {
+          "user": "postgres",
+          "pass": "12345678",
+          "host": "postgres",
+          "port": 5432,
+          "db": "postgres",
+          "sslmode": "disable"
+        }
+      },
+      "mysql": {
+          "dbuser":"root",
+          "dbpwd":"root",
+          "port":3306,
+          "dbname":"student"
+      },
+      "redis": {
+        "host": { "local": "redis:6379" },
+        "password": "",
+        "db": 1
+      },
+      "mongo": {
+        "uri": "mongodb://root:rootpassword@mongo:27017",
+        "db": "basesvc",
+        "collection": "basesvc"
+      }
+    },
+    "newrelic": {
+      "id": "tracking-svc",
+      "key": "649cd11be0e019935af7c06d6a5c11d2634bNRAL",
+      "debug": false
+    },
+    "kafka": {
+      "host": "pkc-ew3qg.asia-southeast2.gcp.confluent.cloud:9092",
+      "group_id": "local.group",
+      "security_protocol": "SASL_SSL",
+      "sasl_mechanisms": "PLAIN",
+      "sasl_username": "XJW3GZQFSDWE5DMR",
+      "sasl_password": "5WQpRtct6EvPpk0wC7JRQCkJNMRIiVDLRMuS4X8n9IJxs4KEJnb0+xmtzEacqCgK",
+      "topics": ["basesvc"]
+    },
+    "dkron": {
+      "host": "dkron:8181"
+    }
+  }

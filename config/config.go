@@ -104,3 +104,15 @@ func Configure() *viper.Viper {
 func GetStringSlice(s string) []string {
 	return c.GetStringSlice(s)
 }
+
+func GetString(s string) string {
+	return c.GetString(s)
+}
+
+func GetInt(s string) int {
+	return c.GetInt(s)
+}
+
+func GetStringMapString(s string) map[string]string {
+	return c.GetStringMapString(s)
+}
